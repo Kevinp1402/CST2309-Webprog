@@ -1,0 +1,74 @@
+@charset "utf-8";
+
+
+h1{
+  text-align: center;
+}
+
+
+
+
+
+
+html {
+   background-color: rgb(192, 192, 192);
+   color: rgb(51, 51, 51);
+   font-size: 18px;
+}
+html, button, input, select, textarea {
+	font-family:  monospace;
+	color: #222;
+}
+body {
+
+	margin: 50;
+	font-size: 1em;
+	line-height: 1.4;
+}
+
+
+
+
+nav.horizontalNavigation li {
+  display: block;
+  float: left;
+}
+
+nav.horizontalNavigation a {
+  display : block;
+  text-align : center;
+}
+
+
+body > header > img {
+	display: block;
+	width: 100%;
+}
+
+
+
+
+
+nav#mainLinks ul li {
+	background-color: rgb(224, 224,224);
+	display: block;
+	float: left;
+	text-align: center;
+	width: 20%;
+}
+
+nav#mainLinks ul li a {
+	color: white;
+	display: block;
+	height: 2.5em;
+	text-align: center;
+	line-height: 2.5em;
+}
+
+nav#mainLinks a:link, nav#mainLinks a:visited {
+	color: black;
+}
+
+nav#mainLinks a:hover, nav#mainLinks a:active {
+	background-color: rgb(255, 255, 255);
+}

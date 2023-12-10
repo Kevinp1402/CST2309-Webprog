@@ -1,0 +1,121 @@
+<html>
+
+<head>
+<title>HTML and JavaScript</title>
+<link href="gym_home.css" rel="stylesheet"/>
+
+
+
+<script>
+
+function doClear ()
+{
+document.GymForm.customer.value = "";
+document.GymForm.address.value ="";
+document.GymForm.city.value = "";
+document.GymForm.state.value = "";
+document.GymForm.zip.value = "";
+document.GymForm.phone.value= "";
+document.GymForm.sizes[0].checked = false;
+document.GymForm.sizes[1].checked = false;
+document.GymForm.sizes[2].checked = false;
+document.GymForm.toppings[0].checked = false;
+document.GymForm.toppings[1].checked = false;
+document.GymForm.toppings[2].checked = false;
+document.GymForm.toppings[3].checked = false;
+document.GymForm.toppings[4].checked = false;
+document.GymForm.toppings[5].checked = false;
+return;
+}
+
+
+function doSubmit()
+{
+  if (validateText()== false)
+  {
+    alert("Required data missing in step 1")
+    return;
+  }
+  if(validateRadio()== false)
+{
+  alert("Required data missing in step 2 ");
+  return;
+}
+  alert("Your Gym Membership Form Has Been Saved.");
+  return;
+}
+function validateText()
+{
+var customer = document.GymForm. customer.value;
+if (customer.length == 0) return false;
+var address = document.GymForm. address.value;
+if (address.length == 0) return false;
+var city = document.GymForm.city.value;
+if (city.length == 0) return false;
+var phone = document.GymForm.phone.value;
+if (phone.length == 0) return false;
+return true;
+}
+
+function validateRadio()
+{
+  if(document.GymForm.sizes[0].checked) return true ;
+  if(document.GymForm.sizes[1].checked) return true ;
+  if(document.GymForm.sizes[2].checked) return true ;
+  return false;
+}
+</script>
+</head>
+
+<body>
+  <nav class="horizontal" id="mainLinks">
+           <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="gym_reservation.html">Membership</a></li>
+              <li><a href="workoutoftheday.html">Workout Of The Day</a></li>
+           </ul>
+        </nav>
+<form name="GymForm">
+<br> <h1> Be Part Of Our Gym ! </h1>
+
+<p>
+
+<h4>Step 1: Enter your name, address, and phone number:</h4>
+<font face="Courier New">
+
+Name: &nbsp; &nbsp; &nbsp; <input name="customer" size="50"
+type="text "><br>
+Address： <input name="address" size="50" type="text"> <br>
+City: &nbsp; &nbsp;&nbsp; <input name="city" size="15" type="text">
+State: <input name="state" size="2" type="TEXT">
+Zip: <input name="zip"size="5" type="text"><br>
+Phone: &nbsp; &nbsp;<input name="phone" size="50" type="text"><br>
+</font>
+
+</p>
+
+<p>
+<h4>Step 2: Select your desired Membership :</h4>
+<font face="Courier New">
+<input name="sizes" type="radio"> Gold
+<input name="sizes" type="radio"> Platnium
+</font>
+</p>
+<p>
+<h4>Step 3: Select your fitness goals :</h4> <font face="Courier New">
+<input name="goals" type="checkbox" >Stamina
+<input name="goals" type="checkbox">Strength
+<input name="goals" type="checkbox" >Weight Liting <br>
+<input name="goals" type="checkbox">Weight Loss
+<input name="goals" type="checkbox">Training
+<input name="goals" type="checkbox">Cardio<br>
+</font>
+</p>
+<input type="button" value="Submit Form" onClick="doSubmit()">
+<input type="button" value="Clear Entry" onClick="doClear()">
+
+   </form>
+
+  </body>
+
+</html>
